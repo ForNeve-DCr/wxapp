@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <!-- <image class="userinfo-avatar" open-data="" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+      <open-data class="userinfo-avatar" type="userAvatarUrl"  mode="cover"></open-data>
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+    </block>
+  </view>
+  <view>
+    <view class='inputView'>
+      <label class='loginlab'>账号：</label>
+      <input class='inputText' id='username'></input>
+    </view>
+     <view class='inputView'>
+      <label class='loginlab'>密码：</label>
+      <input class='inputText' id='password' password='true'></input>
+    </view>
+    <view class='forgetPass'>
+      <label bindtap='forgetPass'>忘记密码</label>
+      <label bindtap='regiest' class='regiest'>注册 </label>
+    </view>
+  </view>
+  <view style='margin-top:50px'>
+    <button class='login' bindtap='login' bindtap='login'>密码登陆</button>
+    <button class='login' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>微信登陆</button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">copyright © 杜爸爸</text>
+  </view>
+</view>
